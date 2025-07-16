@@ -1,0 +1,348 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Header/Navigation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #d5f1f1; /* White header background dari file style.css Anda */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-wrap: wrap; /* Memungkinkan item untuk melipat ke baris baru di layar kecil */
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue-grey for brand */
+}
+
+.nav-links {
+    display: flex; /* Menggunakan flexbox untuk link navigasi */
+    flex-wrap: wrap; /* Memungkinkan link untuk melipat */
+    justify-content: flex-end; /* Posisikan link ke kanan secara default */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3498db; /* Blue for links */
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Mencegah link putus baris */
+}
+
+.nav-links a:hover {
+    color: #640af5; /* Darker blue on hover dari file style.css Anda */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom di desktop */
+    gap: 40px;
+    padding: 50px 5%;
+    align-items: center;
+    background-color: #eaf2f8; /* Light blue background for hero */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-content a {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: #217dbb;
+}
+
+.hero-image {
+    text-align: center;
+    background-color: #d1e0ed; /* Slightly darker grey for image background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* About Me Section */
+.about-me { /* Sesuai dengan tag section di HTML Anda */
+    padding: 40px 5%; /* Tambahkan padding horizontal */
+    text-align: center;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.about-me h2 {
+    font-size: 2.5em;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.about-me-description {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Sesuaikan gap dari style.css Anda */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-me-item {
+    background-color: #f0f8ff; /* Sesuaikan warna dari style.css Anda */
+    border: 1px solid #cce5ff; /* Sesuaikan border dari style.css Anda */
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.about-me-item-header {
+    font-weight: bold;
+    background-color: #cce5ff; /* Sesuaikan warna dari style.css Anda */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Portofolio Section */
+.portofolio-section {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: #eaf2f8; /* Light blue background for portfolio */
+}
+
+.portofolio-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.portofolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom untuk item portofolio */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portofolio-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portofolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.portofolio-image {
+    background-color: #d1e0ed;
+    min-height: 180px; /* Pertahankan tinggi minimum agar tidak terlalu kecil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px; /* Tambahkan padding agar gambar tidak menempel tepi */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+
+.portofolio-image img {
+    width: 100%;
+    height: auto; /* Biarkan tinggi menyesuaikan proporsi gambar */
+    object-fit: contain; /* PENTING: Untuk memastikan gambar tidak terpotong */
+    display: block;
+}
+
+.portofolio-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.portofolio-content b {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e; /* Darker text for title */
+    font-size: 1.1em;
+}
+
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* Tablet Layout (<= 992px) */
+@media screen and (max-width: 992px) {
+    .header {
+        flex-direction: column; /* Tumpuk brand dan nav links */
+        align-items: flex-start;
+        padding: 15px 4%; /* Sesuaikan padding */
+    }
+    .nav-links {
+        margin-top: 10px;
+        justify-content: center; /* Pusatkan link navigasi jika ditumpuk */
+        width: 100%;
+    }
+    .nav-links a {
+        margin: 0 10px; /* Sesuaikan jarak antar link */
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr; /* Tumpuk kolom di tablet */
+        text-align: center;
+        padding: 40px 4%; /* Sesuaikan padding */
+        gap: 30px;
+    }
+    .hero-image {
+        order: -1; /* Pindahkan gambar ke atas teks di layar kecil */
+        margin-bottom: 30px;
+    }
+
+    .about-me-grid, .portofolio-grid { /* Keduanya diubah menjadi 2 kolom untuk tablet */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Sesuaikan gap */
+    }
+
+    .portofolio-image {
+        min-height: 150px; /* Sesuaikan tinggi minimum untuk tablet */
+        padding: 8px; /* Sesuaikan padding */
+    }
+}
+
+/* Mobile Layout (<= 768px) */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 3%; /* Sedikit lebih kecil padding */
+    }
+    .brand {
+        font-size: 20px;
+    }
+    .nav-links a {
+        font-size: 0.95em;
+        margin: 0 8px;
+    }
+
+    .hero-section {
+        padding: 30px 3%;
+        gap: 20px;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .about-me, .portofolio-section {
+        padding: 40px 3%; /* Sesuaikan padding */
+    }
+    .about-me h2, .portofolio-section h2 {
+        font-size: 2em;
+    }
+
+    .about-me-grid { /* Diubah menjadi 1 kolom untuk mobile */
+        grid-template-columns: 1fr;
+    }
+
+    .portofolio-grid { /* Diubah menjadi 1 kolom untuk mobile */
+        grid-template-columns: 1fr;
+    }
+    .portofolio-item {
+        margin-bottom: 20px; /* Tambahkan spasi antar item yang ditumpuk */
+    }
+    .portofolio-image {
+        min-height: 120px; /* Sesuaikan tinggi untuk mobile */
+        padding: 5px; /* Sesuaikan padding */
+    }
+}
+
+/* Smaller Mobile Devices (<= 480px) */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px 2%;
+    }
+    .brand {
+        font-size: 18px;
+    }
+    .nav-links {
+        margin-top: 5px;
+    }
+    .nav-links a {
+        font-size: 0.85em;
+        margin: 0 4px;
+    }
+
+    .hero-section {
+        padding: 25px 2%;
+        gap: 15px;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    .hero-content a {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .about-me, .portofolio-section {
+        padding: 30px 2%;
+    }
+    .about-me h2, .portofolio-section h2 {
+        font-size: 1.8em;
+    }
+
+    .about-me-item, .portofolio-content {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .portofolio-image {
+        min-height: 100px; /* Tinggi gambar lebih kecil untuk layar sangat kecil */
+    }
+}
