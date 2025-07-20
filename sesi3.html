@@ -89,6 +89,42 @@
   transform: scale(0.96);
 }
 
+#testimonial-section .bg-white:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Tombol di luar kolom, tetap elegan */
+.custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  padding: 12px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  filter: invert(1);
+  z-index: 10;
+}
+.carousel-control-prev.custom-carousel-control {
+  left: -25px;
+}
+.carousel-control-next.custom-carousel-control {
+  right: -25px;
+}
+
+/* Responsive fix for small screen */
+@media (max-width: 768px) {
+  .carousel-control-prev.custom-carousel-control {
+    left: 0;
+  }
+  .carousel-control-next.custom-carousel-control {
+    right: 0;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -111,7 +147,7 @@
                     <a class="nav-link" href="#portofolio-section">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
+                    <a class="nav-link" href="#testimonial-section">Testimonials</a>
                 </li>
                 <li class="nav-item ms-md-3">
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#contactModal">
@@ -276,6 +312,88 @@
     </div>
 </div>
 
+<!-- awal section testimonial-->
+<section class="py-5 bg-light position-relative" id="testimonial-section">
+  <div class="container position-relative">
+    <h2 class="text-center mb-5">Testimonials</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/nurse.jpg" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Prasetya bukan hanya seorang pendidik, tapi juga pemikir reflektif yang menginspirasi."</p>
+                <h6 class="mb-0">Ayu Wulandari</h6>
+                <small class="text-muted">Guru Bahasa Indonesia</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/Surgery.jpg" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Kolaborasi dengan Prasetya selalu memicu pemikiran mendalam dan penuh nilai."</p>
+                <h6 class="mb-0">Dwi Santoso</h6>
+                <small class="text-muted">Tim Kurikulum</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/putri.png" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Setiap sesi pelatihannya selalu hidup, penuh empati dan pemahaman mendalam."</p>
+                <h6 class="mb-0">Lestari Widya</h6>
+                <small class="text-muted">Fasilitator Pelatihan</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/pictoblox.webp" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Ia menyatukan nilai spiritual dan teknologi dengan indah dalam karya-karyanya."</p>
+                <h6 class="mb-0">Agung Raharja</h6>
+                <small class="text-muted">Desainer</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/hijab.jpg" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Pak Prasetya adalah guru sejati. Ucapannya membekas di hati saya sampai hari ini."</p>
+                <h6 class="mb-0">Novi Pramesti</h6>
+                <small class="text-muted">Alumni</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-box p-4 bg-white rounded text-center shadow-sm h-100">
+                <img src="img/docter.jpg" class="rounded-circle mb-3" width="80" height="80" style="object-fit: cover;">
+                <p class="mb-2">"Bersama beliau, setiap proyek terasa lebih bermakna dan jujur secara emosional."</p>
+                <h6 class="mb-0">Rekan Lain</h6>
+                <small class="text-muted">Kolaborator</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tombol Navigasi -->
+      <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- akhir section testimonial-->
+
+
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -289,9 +407,8 @@
                 <p><strong>Phone:</strong> 08123456789</p>
                 <p>Kalian bisa juga menghubungi saya di media sosial:</p>
                 <div class="social-icons text-center">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/mahaniputna?t=5lZUzvUQlmNveJSnYdGX4A&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/laoshi.mahaniputna/profilecard/?igsh=YXN3MDgyNzd5Y2V4" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="modal-footer">
