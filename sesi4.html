@@ -124,6 +124,17 @@
   }
 }
 
+/* Card efek hover About me */
+.aboutme-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .aboutme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
 
     </style>
 </head>
@@ -187,37 +198,37 @@
         <p class="lead text-center mb-5">Saya adalah seorang guru. Saya ingin mendalami dunia programming. Oleh karena itu saya mengikuti kelas fullstack programming ini.</p>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-user me-2"></i>Nama Lengkap</div>
                     <div>Prasetya Catur Nugraha</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-graduation-cap me-2"></i>Pendidikan</div>
                     <div>S1 Manajemen Bisnis</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-briefcase me-2"></i>Pekerjaan</div>
                     <div>Guru SMP</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-envelope me-2"></i>Contact</div>
                     <div>08123456789</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-heart me-2"></i>Hobi</div>
                     <div>Membaca, Menulis</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="about-me-item">
+                <div class="about-me-item card h-100 text-center border-primary shadow-sm aboutme-card">
                     <div class="about-me-item-header"><i class="fas fa-map-marker-alt me-2"></i>Alamat</div>
                     <div>Jl. Bumi Marina Mas Surabaya</div>
                 </div>
@@ -249,7 +260,8 @@
                             <img src="img/coding.jpg" class="card-img-top" alt="Pelatihan Coding">
                             <div class="card-body">
                                 <h5 class="card-title">Pelatihan Coding</h5>
-                                <p class="card-text">Saya mengikuti pelatihan koding dan kecerdasan artifisial.</p>
+                                <p class="card-text" style="text-align: justify;">Saya mengikuti pelatihan koding dan kecerdasan artifisial.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">Lihat Detail</button>
                             </div>
                         </div>
                     </div>
@@ -258,7 +270,8 @@
                             <img src="img/phyton.jpg" class="card-img-top" alt="Pelatihan Python">
                             <div class="card-body">
                                 <h5 class="card-title">Pelatihan Python</h5>
-                                <p class="card-text">Saya mengikuti International Teacher Training on Python with pictoblox.</p>
+                                <p class="card-text" style="text-align: justify;">Saya mengikuti International Teacher Training on Python with pictoblox.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal2">Lihat Detail</button>
                             </div>
                         </div>
                     </div>
@@ -267,7 +280,8 @@
                             <img src="img/AI.jpg" class="card-img-top" alt="Praktik Baik AI">
                             <div class="card-body">
                                 <h5 class="card-title">Praktik Baik</h5>
-                                <p class="card-text">Saya mengikuti pelatihan mendesain pembelajaran adaptif dan interaktif berbasis AI.</p>
+                                <p class="card-text" style="text-align: justify;">Saya mengikuti pelatihan mendesain pembelajaran adaptif dan interaktif berbasis AI.</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal3">Lihat Detail</button>
                             </div>
                         </div>
                     </div>
@@ -310,6 +324,54 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Pelatihan Coding</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/coding.jpg" class="img-fluid mb-3" alt="Pelatihan Coding">
+        <p style="text-align: justify;">Saya mengikuti pelatihan koding dan kecerdasan artifisial sebagai langkah awal memahami dunia pemrograman modern.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Pelatihan Python</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/phyton.jpg" class="img-fluid mb-3" alt="Pelatihan Python">
+        <p style="text-align: justify;">Saya mengikuti pelatihan Python menggunakan pictoblox bersama guru-guru internasional, memperluas wawasan tentang pemrograman berbasis visual dan teks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Praktik Baik AI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/AI.jpg" class="img-fluid mb-3" alt="Praktik Baik AI">
+        <p style="text-align: justify;">Dalam pelatihan AI ini saya belajar bagaimana merancang pembelajaran adaptif, dengan bantuan teknologi kecerdasan buatan untuk meningkatkan pengalaman belajar siswa.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- awal section testimonial-->

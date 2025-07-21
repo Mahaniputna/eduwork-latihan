@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Prasetya</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+  .aboutme-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .aboutme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Prasetya</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about-me-section">Biodata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portofolio-section">Portofolio</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1>Selamat Datang di Website Saya</h1>
+      <p>Perkenalkan nama saya adalah Prasetya Catur Nugraha. Ini adalah tampilan tugas 1 saya.</p>
+      <a href="#about-me-section" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="img/foto.jpg" alt="Foto Diri Saya" class="img-fluid rounded-circle">
+    </div>
+  </div>
+</div>
+
+<!-- About Me Section -->
+<div class="container my-5" id="about-me-section">
+  <h2 class="text-center mb-4">Tentang Saya</h2>
+  <div class="text-center mb-4">
+     <p class="mt-3">Halo! Saya Prasetya Catur Nugraha, seorang guru yang sedang mendalami dunia <strong>Fullstack Programming</strong>.</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+        <div class="card-body">
+          <i class="bi bi-person-fill fs-1 text-primary"></i>
+          <h5 class="card-title mt-2">Nama Lengkap</h5>
+          <p class="card-text">Prasetya Catur Nugraha</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+        <div class="card-body">
+          <i class="bi bi-mortarboard-fill fs-1 text-success"></i>
+          <h5 class="card-title mt-2">Pendidikan</h5>
+          <p class="card-text">S1 Manajemen Bisnis</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+        <div class="card-body">
+          <i class="bi bi-briefcase-fill fs-1 text-warning"></i>
+          <h5 class="card-title mt-2">Pekerjaan</h5>
+          <p class="card-text">Guru SMP</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+        <div class="card-body">
+          <i class="bi bi-telephone-fill fs-1 text-danger"></i>
+          <h5 class="card-title mt-2">Kontak</h5>
+          <p class="card-text">08123456789</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+        <div class="card-body">
+          <i class="bi bi-heart-fill fs-1 text-info"></i>
+          <h5 class="card-title mt-2">Hobi</h5>
+          <p class="card-text">Membaca, Menulis</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center border-primary shadow-sm aboutme-card">
+          <i class="bi bi-geo-alt-fill fs-1 text-dark"></i>
+          <h5 class="card-title mt-2">Alamat</h5>
+          <p class="card-text">Jl. Bumi Marina Mas Surabaya</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portofolio Section -->
+<div class="container my-5" id="portofolio-section">
+  <h2 class="text-center mb-4">Portofolio</h2>
+  <div class="row g-4">
+    <!-- Item 1 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/coding.jpg" class="card-img-top" alt="Pelatihan Coding">
+        <div class="card-body">
+          <h5 class="card-title">Pelatihan Coding</h5>
+          <p class="card-text">Saya mengikuti pelatihan koding dan kecerdasan artifisial.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">Lihat Detail</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/phyton.jpg" class="card-img-top" alt="Pelatihan Python">
+        <div class="card-body">
+          <h5 class="card-title">Pelatihan Python</h5>
+          <p class="card-text">Saya mengikuti International Teacher Training on Python with pictoblox.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal2">Lihat Detail</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img/AI.jpg" class="card-img-top" alt="Praktik Baik AI">
+        <div class="card-body">
+          <h5 class="card-title">Praktik Baik AI</h5>
+          <p class="card-text">Saya mengikuti pelatihan mendesain pembelajaran adaptif dan interaktif berbasis AI.</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal3">Lihat Detail</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Pelatihan Coding</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/coding.jpg" class="img-fluid mb-3" alt="Pelatihan Coding">
+        <p>Saya mengikuti pelatihan koding dan kecerdasan artifisial sebagai langkah awal memahami dunia pemrograman modern.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Pelatihan Python</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/phyton.jpg" class="img-fluid mb-3" alt="Pelatihan Python">
+        <p>Saya mengikuti pelatihan Python menggunakan pictoblox bersama guru-guru internasional, memperluas wawasan tentang pemrograman berbasis visual dan teks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Praktik Baik AI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/AI.jpg" class="img-fluid mb-3" alt="Praktik Baik AI">
+        <p>Dalam pelatihan AI ini saya belajar bagaimana merancang pembelajaran adaptif, dengan bantuan teknologi kecerdasan buatan untuk meningkatkan pengalaman belajar siswa.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
