@@ -28,8 +28,8 @@
     <!-- Hero Section -->
     <section class="py-5 bg-light text-center">
         <div class="container">
-            <h1 class="display-4">Welcome to Product page</h1>
-            <p class="lead">Find the best products at unbeatable prices!</p>
+            <h1 class="display-4"> {{$title}} </h1>
+            <p class="lead"> {{$sub_title}} </p>
             <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
         </div>
     </section>
@@ -39,42 +39,20 @@
         <div class="container">
             <h2 class="mb-4 text-center">Featured Products</h2>
             <div class="row g-4">
+                @foreach ($products as $product)
                 <!-- Product Card 1 -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product 1">
                         <div class="card-body">
-                            <h5 class="card-title">Product Name 1</h5>
+                            <h5 class="card-title">{{ $product['name'] }}</h5>
                             <p class="card-text">Short description of the product.</p>
-                            <p class="fw-bold">$19.99</p>
+                            <p class="fw-bold">{{"Rp " . number_format($product['price'], 0, ",", ".")}}</p>
                             <a href="#" class="btn btn-outline-primary">Add to Cart</a>
                         </div>
                     </div>
                 </div>
-                <!-- Product Card 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Product Name 2</h5>
-                            <p class="card-text">Short description of the product.</p>
-                            <p class="fw-bold">$29.99</p>
-                            <a href="#" class="btn btn-outline-primary">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Product 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Product Name 3</h5>
-                            <p class="card-text">Short description of the product.</p>
-                            <p class="fw-bold">$39.99</p>
-                            <a href="#" class="btn btn-outline-primary">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
