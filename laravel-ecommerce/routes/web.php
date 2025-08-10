@@ -2,14 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContohController;
-use App\Http\Controllers\HomeController;
 
+Route::get('/contoh', [ContohController::class, 'index']);
 
-Route::get('/index/{a}/{b}', [ContohController::class, 'tambah']);
-Route::get('/product', [ContohController::class, 'Halaman']);
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/', [HomeController::class, 'index']);
-    
-
+Route::get('/product', function () {
+    return view('product.index');
+});
 
 
