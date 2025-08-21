@@ -22,11 +22,14 @@ class ProductController extends Controller
     /**
      * Tampilkan produk berdasarkan kategori tertentu.
      */
-    public function showByCategory(ProductCategory $category)
+    public function byCategory($slug)
     {
-        $products = $category->products()->latest()->paginate(12);
+        $category = ProductCategory::where('slug', $slug)->firstOrFail();
+        $products = Product::where('product_category_id', $category->id)
+            ->with('category')
+            ->paginate(12);
         $categories = ProductCategory::all();
 
-        return view('products.index', compact('products', 'categories'));
+        return view('products.index', compact('products', 'categories', 'category'));
     }
 }
